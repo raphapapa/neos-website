@@ -110,6 +110,11 @@ const content = {
       heading: "お知らせ",
       items: [
         {
+          date: "2026.02.14",
+          title: "公式サイトを公開しました",
+          category: "INFO",
+        },
+        {
           date: "2026.02.13",
           title: "公式ウェブサイトを公開しました",
           category: "お知らせ",
