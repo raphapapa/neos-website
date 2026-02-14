@@ -21,6 +21,10 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
   title: t.meta.title,
   description: t.meta.description,
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
