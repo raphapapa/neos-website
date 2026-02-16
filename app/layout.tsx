@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Bebas_Neue } from "next/font/google";
 import "./globals.css";
-import content from "@/constants/content";
-
-const t = content.ja;
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -19,12 +18,12 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: t.meta.title,
-  description: t.meta.description,
-  robots: {
-    index: false,
-    follow: false,
+  title: {
+    default: "NEOS E-SPORTS | 公式サイト",
+    template: "%s | NEOS E-SPORTS",
   },
+  description:
+    "eスポーツを通じて人が本気で成長する環境を。NEOS E-SPORTSはFortniteを中心に活動するeスポーツチームです。",
 };
 
 export default function RootLayout({
@@ -37,7 +36,9 @@ export default function RootLayout({
       <body
         className={`${notoSansJP.variable} ${bebasNeue.variable} font-body antialiased`}
       >
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

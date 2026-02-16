@@ -1,15 +1,12 @@
 import Image from "next/image";
-import content from "@/constants/content";
-
-const t = content.ja;
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6">
-          {/* Logo + Name */}
-          <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo/logo_01.png"
               alt="NEOS"
@@ -20,16 +17,21 @@ export default function Footer() {
             <span className="font-heading text-xl tracking-wider">
               NEOS E-SPORTS
             </span>
-          </div>
+          </Link>
 
-          {/* Slogan */}
           <p className="font-heading text-sm tracking-[0.2em] text-neos-gray">
-            {t.footer.slogan}
+            STRONG / COOL / GOOD MANNERS
           </p>
 
-          {/* Social */}
+          <nav className="flex gap-6 text-sm text-neos-gray">
+            <Link href="/about" className="hover:text-white transition-colors">ABOUT</Link>
+            <Link href="/players" className="hover:text-white transition-colors">PLAYERS</Link>
+            <Link href="/news" className="hover:text-white transition-colors">NEWS</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">CONTACT</Link>
+          </nav>
+
           <a
-            href={t.contact.xUrl}
+            href="https://x.com/NEOSCLAN_FN"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neos-gray hover:text-white transition-colors"
@@ -40,8 +42,9 @@ export default function Footer() {
             </svg>
           </a>
 
-          {/* Copyright */}
-          <p className="text-xs text-neos-gray/50">{t.footer.copyright}</p>
+          <p className="text-xs text-neos-gray/50">
+            &copy; 2026 NEOS E-SPORTS. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

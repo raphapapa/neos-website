@@ -1,29 +1,30 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Values from "@/components/Values";
-import Activities from "@/components/Activities";
-import Members from "@/components/Members";
-import News from "@/components/News";
-import Sponsor from "@/components/Sponsor";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Hero from "@/components/home/Hero";
+import AboutPreview from "@/components/home/AboutPreview";
+import PlayerHighlight from "@/components/home/PlayerHighlight";
+import NewsPreview from "@/components/home/NewsPreview";
+import SponsorSection from "@/components/home/SponsorSection";
+import SectionDivider from "@/components/shared/SectionDivider";
+import { getPlayers } from "@/lib/api/players";
+import { getArticles } from "@/lib/api/articles";
+import { getSponsors } from "@/lib/api/sponsors";
 
-export default function Home() {
+export default async function Home() {
+  const [players, articlesRes, sponsors] = await Promise.all([
+    getPlayers(),
+    getArticles(1, 4),
+    getSponsors(),
+  ]);
+
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Values />
-        <Activities />
-        <Members />
-        <News />
-        <Sponsor />
-        <Contact />
-      </main>
-      <Footer />
+      <Hero />
+      <AboutPreview />
+      <SectionDivider />
+      <PlayerHighlight players={players} />
+      <SectionDivider />
+      <NewsPreview articles={articlesRes.articles} />
+      <SectionDivider />
+      <SponsorSection sponsors={sponsors} />
     </>
   );
 }

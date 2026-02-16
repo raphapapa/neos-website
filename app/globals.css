@@ -21,12 +21,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c41e3a;
+  background: #E50914;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e53935;
+  background: #FF1A25;
 }
 
 /* Section fade-in animation */

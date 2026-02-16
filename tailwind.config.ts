@@ -10,9 +10,9 @@ const config: Config = {
       colors: {
         neos: {
           black: "#0A0A0A",
-          red: "#C41E3A",
-          "red-bright": "#E53935",
-          "red-dark": "#8B1A1A",
+          red: "#E50914",
+          "red-bright": "#FF1A25",
+          "red-dark": "#B20710",
           gray: "#9CA3AF",
           "gray-dark": "#1A1A1A",
         },
@@ -23,7 +23,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 
 export default config;
