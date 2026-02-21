@@ -22,6 +22,15 @@ npm-debug.log*
 # vercel
 .vercel
 
+# claude code
+.claude/settings.local.json
+
+# Windows
+nul
+
+# session temp
+docs/next-session-prompt.txt
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
