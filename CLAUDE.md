@@ -156,7 +156,7 @@ Player Appの画像は Supabase Storage の公開バケットに格納されて�
 
 ### 関連プロジェクト
 
-- **neos-player-app**（`C:\Users\takum\neos-player-app\`）— 同じSupabase DBを共有。データ構造の変更元
+- **neos-player-app**（`C:\Users\takum\dev\neos-player-app\`）— 同じSupabase DBを共有。データ構造の変更元
 
 ### トリガー条件
 
