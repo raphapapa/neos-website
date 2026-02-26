@@ -31,7 +31,7 @@ export default function Footer() {
           </nav>
 
           <a
-            href="https://x.com/NEOSCLAN_FN"
+            href="https://x.com/neos_fortnite"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neos-gray hover:text-white transition-colors"
