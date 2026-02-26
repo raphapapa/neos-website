@@ -74,9 +74,11 @@ eスポーツサイトとしての視覚的インパクトを優先した判断�
 
 ```bash
 # .env.local
-NEXT_PUBLIC_API_BASE=http://localhost:3000       # ローカル開発
-NEXT_PUBLIC_API_BASE=https://your-app.vercel.app # 本番
+NEXT_PUBLIC_API_BASE=http://localhost:3000                  # ローカル開発
+NEXT_PUBLIC_API_BASE=https://neos-player-app.vercel.app     # 本番
 ```
+
+Vercel環境変数にも `NEXT_PUBLIC_API_BASE=https://neos-player-app.vercel.app` を設定済み。
 
 ### 利用API（全7本、neos-player-appで提供）
 
