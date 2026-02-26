@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getSiteSettings } from "@/lib/api/site-settings";
 
-const FALLBACK_X_URL = "https://x.com/neos_fortnite";
+const FALLBACK_X_URL = "https://x.com/neos_esports";
 
 export default async function Footer() {
   const settings = await getSiteSettings();
