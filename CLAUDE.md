@@ -89,6 +89,7 @@ NEXT_PUBLIC_API_BASE=https://your-app.vercel.app # 本番
 | GET | `/api/public/sponsors` | トップ |
 | GET | `/api/public/tournaments?limit=&player_id=` | /players/[id]内で結合済み |
 | POST | `/api/public/contact` | /contact |
+| GET | `/api/public/site-settings` | Footer（Xリンク） |
 
 全APIキャッシュ: `s-maxage=60, stale-while-revalidate=300`
 全APICORS: `Access-Control-Allow-Origin: *`

@@ -118,6 +118,13 @@ export type TournamentEntry = {
   team_members: string[] | null;
 };
 
+// --- SiteSettings ---
+
+export type SiteSettings = {
+  x_url: string | null;
+  junior_x_url: string | null;
+};
+
 // --- Contact ---
 
 export type ContactForm = {
